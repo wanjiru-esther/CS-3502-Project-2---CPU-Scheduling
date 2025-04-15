@@ -321,5 +321,33 @@ public class MLFQScheduler
         Console.WriteLine($"Average Response Time: {results.AverageResponseTime}");
     }
 }
+public class CPUSchedulerManager
+{
+    public static void Main(string[] args)
+    {
+        List<Process> processes = new List<Process>
+        {
+            new Process(1, 0, 8),
+            new Process(2, 1, 4),
+            new Process(3, 2, 9),
+            new Process(4, 3, 5),
+            new Process(5, 4, 7),
+            new Process(6, 5, 2),
+            new Process(7, 6, 6),
+            new Process(8, 7, 3),
+        };
+
+        HRRNScheduler hrrnScheduler = new HRRNScheduler();
+        MLFQScheduler mlfqScheduler = new MLFQScheduler();
+
+        SchedulingResults hrrnResults = hrrnScheduler.Schedule(processes.ToList());
+        SchedulingResults mlfqResults = mlfqScheduler.Schedule(processes.ToList());
+
+        hrrnScheduler.DisplayResults(hrrnResults);
+        mlfqScheduler.DisplayResults(mlfqResults);
+
+        Console.ReadKey();
+    }
+}
 
 
