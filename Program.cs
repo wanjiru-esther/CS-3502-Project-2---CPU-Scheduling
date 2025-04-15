@@ -349,5 +349,34 @@ public class CPUSchedulerManager
         Console.ReadKey();
     }
 }
-
-
+//output 
+/*Process AT      BT      ST      CT      WT      TAT     RT
+1       0       8       0       33      25      33      0
+2       1       4       8       8       3       7       7
+6       5       2       12      22      15      17      7
+8       7       3       14      29      19      22      7
+4       3       5       17      39      31      36      14
+7       6       6       22      44      32      38      16
+5       4       7       28      42      31      38      24
+3       2       9       35      38      27      36      33
+Average Waiting Time: 13.5
+Average Turnaround Time: 19
+CPU Utilization: 100%
+Throughput: 0.18181818181818182 processes/unit time
+Average Response Time: 13.5
+MLFQ Results:
+Process AT      BT      ST      CT      WT      TAT     RT
+2       1       4       8       8       3       7       7
+6       5       2       12      22      15      17      7
+8       7       3       14      29      19      22      7
+1       0       8       0       33      25      33      0
+3       2       9       35      38      27      36      33
+4       3       5       17      39      31      36      14
+5       4       7       28      42      31      38      24
+7       6       6       22      44      32      38      16
+Average Waiting Time: 22.875
+Average Turnaround Time: 28.375
+CPU Utilization: 90.9090909090909%
+Throughput: 0.18181818181818182 processes/unit time
+Average Response Time: 13.5
+*/
