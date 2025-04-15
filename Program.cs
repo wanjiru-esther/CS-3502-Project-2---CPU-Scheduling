@@ -33,4 +33,23 @@ public class Process
     {
         return $"ID: {ProcessId}, Arrival: {ArrivalTime}, Burst: {BurstTime}, Priority: {Priority}";
     }
+} // Class to hold the results of a scheduling algorithm.
+public class SchedulingResults
+{
+    public List<Process> CompletedProcesses { get; set; }
+    public double AverageWaitingTime { get; set; }
+    public double AverageTurnaroundTime { get; set; }
+    public double CPUUtilization { get; set; }
+    public double Throughput { get; set; }
+    public double AverageResponseTime { get; set; }
+
+    public SchedulingResults()
+    {
+        CompletedProcesses = new List<Process>();
+        AverageWaitingTime = 0;
+        AverageTurnaroundTime = 0;
+        CPUUtilization = 0;
+        Throughput = 0;
+        AverageResponseTime = 0;
+    }
 }
